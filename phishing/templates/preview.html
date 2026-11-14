@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=montserrat:ital,wght@0,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL</title>
+    <style>
+        style>
+        * {
+            margin: 0px;
+        }
+        #loading {
+        background: url('../static/ajax-loader.gif') no-repeat center center;
+        position: absolute;
+        top: 0;
+        left: 59;
+        height: 100%;
+        width: 86%;
+        z-index: 9999999;
+     }
+     button{
+        background-color: blue;
+        color:white;
+     }
+        </style>
+    </head>
+
+    <body>
+    <center>
+    <h1>Preview Dataset</h1>
+    <div>{{data.to_html(classes="table striped",na_rep="-") | safe}}</div>
+    <br/><br/>
+    <button type="submit" onclick="predict()">click to predict</button>
+    <br/><br/>
+    </center>
+    
+    <script>
+        function predict(){
+            alert("training finished");
+           window.open("/index","_self");          
+        }
+    </script>
+</body>
+</html>

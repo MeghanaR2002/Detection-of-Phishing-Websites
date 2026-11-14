@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=montserrat:ital,wght@0,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 350px;
+            height:300px;
+            position: relative;
+            padding-right: 200px;
+        }
+        .menu-container {
+            position:relative;
+            margin-top: 5px;
+        }
+        .menu {
+           text-decoration: none;
+            color: lightblue;
+            background-color: darkblue;
+            padding: 20px;
+            border-radius: 20px;
+            margin-left: 800px;
+            margin-top: auto;
+            font-size: 18px;
+            position: fixed;
+        }
+        .menu:hover {
+            background-color: darkcyan;
+            color: lightcyan;
+        }
+        .login-container {
+            position: relative;
+          margin-top: 10px;
+          width: 300px;
+          height: 350px;
+        }
+           h1 {
+            margin-bottom: 20px;
+            color: white;
+        }  
+        label {
+            font-size: 20px;
+            color: white;
+        }
+        input[type=text],input[type=password] {
+          width: 200px;
+          height: 40px;
+          font-size: 20px;
+        }
+        input[type="submit"] {
+         width: 100px;
+         height:50px;
+         font-size: 20px;
+         font-weight: bold;
+         border-radius: 5px;
+         color: darkcyan;
+         background-color: lightcyan;
+         cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: darkblue;
+            color: white;
+        }
+        body{
+        background-image: url("../static/bg2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+        h2{
+            color: white;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            display: flex;
+            margin-right: 0px;
+            padding: 10px;
+            position: relative;
+            font-size: 25px;
+        }
+        
+    
+    </style>
+</head>
+<body>
+
+
+    <div class="header">
+    <h2><b>Detection of phishing websites</b></h2>
+        <div class="menu-container">
+    
+            
+            <a class="menu" href="/">HOME </a>
+        </div>    
+    </div>
+    <center>
+        <div class="login-container">
+            <h1>Login Form</h1>
+            <label>Enter the username:</label>
+            <input type="text" name="username" id="username" required/>
+            <br /></br />
+            <label>Enter the password:</label>
+            <input type="password" name="password" id="password" required/>
+            <br /><br />
+            <input type="submit"value="Login" onclick="validate()"/>
+        
+    
+        </div>
+    </center> 
+    <script>
+        function validate() {
+          var username=document.getElementById("username").value; 
+          var password=document.getElementById("password").value; 
+          if(username == "admin" && password == "admin"){
+            alert("login success");
+            window.open('/upload',"_self");
+           } else {
+             alert("invalid credentials");
+           }
+
+        //   alert(username + password);  
+            // alert("connected");
+        }
+    </script>
+</body>
+</html>
